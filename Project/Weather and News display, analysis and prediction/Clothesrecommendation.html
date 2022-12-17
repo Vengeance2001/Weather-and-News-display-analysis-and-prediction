@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothes</title>
+
+    <style>
+        body {
+            background-color: blanchedalmond;
+            background-size: cover;
+        }
+
+
+        #ab {
+            font-family: 'Oswald', sans-serif;
+            font-family: 'Permanent Marker', cursive;
+            text-align: center;
+            color: white;
+            background-color: black;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        
+        #ad{
+           align-content: center;
+           padding-left:40% ;
+           padding-top: 5%;
+           font-size: 3vh;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="ab">
+        <h1 style="margin-bottom: 0px;">WELCOME</h1>
+    </div>
+    <div class="as">
+
+        <marquee style="background-color: darkred; color: azure;">*Enter a season in the textbox and you shall get the
+            clothes recommened in that temperature*</marquee>
+           <div id="ad">
+               
+               <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;  color: orange;">ENTER THE TEMPERATURE </h3>
+               
+               <input type="number" id="myNumber" value="0">
+               <button onclick="myNumber()">Submit</button>
+               
+               <p id="demo"></p>
+               <h3 style="font-style: italic;" style="color: rgb(253, 254, 255);">Clothes Recommended:</h3>
+               <p id="temp"></p>
+        </div>
+    </div>
+
+    <script>
+        function myNumber() {
+            let x = document.getElementById("myNumber").value;
+            //document.getElementById("demo").innerHTML = x;
+
+
+
+            let greet;
+            if (x < 0) {
+                greet = "Outerwear: Double-layered hooded down jackets (Preferably waterproof)<br>Tops: Sweaters, Jumpers, Turtlenecks<br>Bottoms: Pants, Leggings (Preferably waterproof) Thermal underwear<br>Accessories: Beanies, Ear Muffs, Scarves, Thick Socks (bring multiple pairs to layer, if need be), Heat pads (for extra warmth!)<br>Waterproof winter boots (with a good grip and insulated lining)"
+
+            }
+            else if (x < 5) {
+                greet = "Outerwear: Padded or Puffer Coat, Overcoats (Trench Coats, Fur or Faux Fur Coats etc.), Down Jacket<br> Bottoms: Jeans, Trousers Thermal Underwear: Long-sleeved thermal top, Thermal leggings (at least one of each to layer underneath your jeans or sweaters for extra warmth)<br> Accessories: Beanies, Berets, Touchscreen-Friendly Gloves, Scarves, Socks,Boots";
+
+            }
+            else if (x < 15) {
+                greet = "Tops (for Layering): Shirts, Hoodies, Dresses<br> Lightweight Outerwear: Leather jackets, Biker jackets, Parkas, Pea Coats<br> Bottoms: Jeans, Trousers, Skirts Shoes: Sneakers, Boots<br> Accessories: A light scarf *optional";
+            }
+            else if (x < 20) {
+                greet = "MATERIALS: light wool, leather, waterproof fabrics. Under them, tops and shirts in cotton and other thin fabrics.<br>KEY PIECES: the trench coat if it is cloudy; the leather jacket if there is wind. Create your wool vest!<br>ACCESSORIES: shoe or ankle boot"
+            }
+            else if (x < 25) {
+                greet = "MATERIALS: cotton, jersey, denim. In short, light or mixed fabrics for a variable time.<br>KEY PIECES: if the weather is not so good, wear a denim jacket or a trench; if it is sunny, a cardigan or a maxi scarf is better.<br>ACCESSORIES: if there is sun, open shoes are fine too; otherwise, sneakers, moccasins or décolleté."
+            }
+            else if (x < 30) {
+                greet = "MATERIALS: cotton and other other light fabrics, with short sleeves. It’s hot even with the bad weather!<br>KEY PIECES: a super versatile shirt; a white t-shirt; a silk blouse. Below, cotton trousers or a maxi skirt.<br>ACCESSORIES: open sandals, but also moccasins or décolleté. Do not forget sunglasses!"
+            }
+            else if (x < 35) {
+                greet = "MATERIALS: light fabrics and baggy volumes to stay fresh. The heat has really arrived!<br>KEY PIECES: mini or maxi dress. Indoor the air conditioning does not forgive: always bring a cardigan …<br>ACCESSORIES: get yourself a nice hat! As for shoes, I highly recommend the open-toe o"
+            }
+            else if (x < 55) { greet = "Top:long-sleeved light coloured t-shirts<br>Bottom:Shorts<br>Acessories:Cap,Scarf<br>Footwear:Sandals/Flip Flops" }
+            else {
+
+                greet = "Above Highest temperature recorded";
+            }
+            document.getElementById("temp").innerHTML = greet
+
+        }
+    </script>
+    </script>
+</body>
+
+</html>

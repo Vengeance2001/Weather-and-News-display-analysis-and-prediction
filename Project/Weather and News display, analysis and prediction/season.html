@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasons</title>
+    <style>
+        body{
+         background-color: cornsilk;
+        }
+        .as{
+          align-items: center;
+          padding-left: 40%;
+          padding-top: 10%;
+          font-size: 3vh;
+         
+        }
+        script{
+            font-size: 15px;
+        }
+        .para{
+             /* margin-top: 0px; 
+             margin-bottom: 0px; */
+             font-size: 10vh;
+             font-style: normal;
+          
+        }
+        ul{
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-left: 20px;
+            font-style: italic;
+        }
+        h1{
+            margin-bottom: 0px;
+            text-align: center;
+            background-color: Black;
+            color: azure;
+        }
+        marquee{
+            background-color: darkred;
+            color: white;    
+        }
+        h3{
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    </style>
+<head>
+</head>
+<body>
+<h1 style="margin-top: 0px;">WELCOME</h1>
+<marquee>*Enter a season in the textbox and you shall get the clothes recommened in that season*</marquee>
+    <div class="as">
+
+      <div class="para">
+        Type a season:
+      </div>
+      <ul>
+        <li>Summer</li>
+        <li>Monsoon</li>
+        <li>Winter</li>
+      </ul>
+      
+      <input id="myInput" type="text">
+      
+      <button onclick="myFunction()">GO</button>
+      <h3 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Clothes Recommened</h3>
+      
+      <p id="demo" style="margin-top: 0px;"></p>
+      
+    </div>
+<script>
+function myFunction() {
+  var text;
+  var fruits = document.getElementById("myInput").value;
+
+  switch(fruits) {
+    case "Summer":
+      text = "=>Light coloured Cotton clothes";
+    break;
+    case "summer":
+      text = "=>Loose coloured Cotton clothes";
+    break;
+    case "SUMMER":
+      text = "=>Loose coloured Cotton clothes";
+    break;
+    case "Monsoon":
+      text = "=>Raincoats or Synthetic fabric clothes such as nylon clothes";
+    break;
+    case "monsoon":
+      text = "=>Raincoats or Synthetic fabric clothes such as nylon clothes";
+    break;
+    case "MONSOON":
+      text = "=>Raincoats or Synthetic fabric clothes such as nylon clothes";
+    break;
+    case "Winter":
+      text = "=>Warm Woolen Clothes";
+    break;
+    case "winter":
+      text = "=>Warm Woolen Clothes";
+    break;
+    case "WINTER":
+      text = "=>Warm Woolen Clothes";
+    break;
+    default:
+    text = "=>Pls check the list...";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+</body>
+</html>
